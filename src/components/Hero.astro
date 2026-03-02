@@ -2,7 +2,7 @@
 const HERO_IMG = 'https://www.figma.com/api/mcp/asset/54501f41-4fe4-4979-83b1-e51d22fa794b';
 ---
 
-<section class="relative mx-8 mt-12 rounded-2xl overflow-hidden min-h-[560px] flex items-center justify-center">
+<section class="relative mx-4 mt-6 rounded-2xl overflow-hidden min-h-[420px] flex items-center justify-center sm:mx-6 sm:mt-10 sm:min-h-[520px] lg:mx-8 lg:mt-12 lg:min-h-[560px]">
   <!-- Background image -->
   <img
     src={HERO_IMG}
@@ -14,25 +14,25 @@ const HERO_IMG = 'https://www.figma.com/api/mcp/asset/54501f41-4fe4-4979-83b1-e5
   <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30"></div>
 
   <!-- Content -->
-  <div class="relative z-10 flex flex-col items-center gap-6 max-w-3xl px-4 py-20 text-center">
+  <div class="relative z-10 flex flex-col items-center gap-6 max-w-3xl px-4 py-14 text-center sm:py-20">
 
     <!-- Title -->
-    <h1 class="font-display text-7xl italic text-white ">
+    <h1 class="font-display text-4xl italic text-white leading-tight sm:text-6xl lg:text-7xl">
       El Sabor de{' '}
       <span class="italic font-extrabold text-green-cafe">Nuestras<br />Raíces</span>
     </h1>
 
     <!-- Subtitle -->
-    <p class="text-warm text-xl leading-7 max-w-lg font-extralight">
+    <p class="text-warm text-base leading-7 max-w-lg font-extralight sm:text-lg lg:text-xl">
       Café de especialidad en Marinilla, Antioquia. 
       <br> Un homenaje a la tierra, a la tradición y a cada grano cultivado con pasión.
     </p>
 
     <!-- Buttons -->
-    <div class="flex gap-4 pt-4">
+    <div class="flex flex-col w-full gap-3 pt-4 sm:w-auto sm:flex-row sm:gap-4">
       <a
         href="#menu"
-        class="flex items-center gap-2 bg-green-cafe text-white text-base font-extralight rounded-lg px-8 py-3
+        class="flex items-center justify-center gap-2 bg-green-cafe text-white text-base font-extralight rounded-lg px-8 py-3
                shadow-[0_10px_15px_-3px_rgba(85,107,47,0.3),0_4px_6px_-4px_rgba(85,107,47,0.3)]
                hover:bg-[#4a5e28] transition-colors duration-200"
       >

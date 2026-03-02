@@ -6,6 +6,6 @@
 
 @layer base {
   body {
-    @apply bg-cream font-body font-extralight text-stone-cafe;
+    @apply bg-cream font-body font-extralight text-stone-cafe overflow-x-hidden;
   }
 }

@@ -29,9 +29,9 @@ const menuItems = [
 ];
 ---
 
-<section id="menu" class="bg-cream px-8 py-20">
+<section id="menu" class="bg-cream px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
   <!-- Header -->
-  <div class="text-center mb-12">
+  <div class="text-center mb-10 sm:mb-12">
     <h2 class="font-display text-4xl font-normal text-stone-cafe mb-2">Menú Destacado</h2>
     <p class="text-base text-black font-extralight">
       Desde preparaciones clásicas hasta métodos de filtrado y repostería artesanal.
@@ -39,13 +39,13 @@ const menuItems = [
   </div>
 
   <!-- Cards -->
-  <div class="grid grid-cols-4 gap-8 max-w-[1280px] mx-auto mb-20">
+  <div class="grid grid-cols-1 gap-6 max-w-[1280px] mx-auto mb-12 sm:grid-cols-2 sm:gap-8 sm:mb-16 lg:grid-cols-4 lg:mb-20">
     {menuItems.map(item => (
       <div class="bg-cream rounded-xl overflow-hidden shadow-sm flex flex-col">
         <img
           src={item.image}
           alt={item.name}
-          class="w-full h-[280px] object-cover"
+          class="w-full h-[220px] object-cover sm:h-[260px] lg:h-[280px]"
         />
         <div class="p-5 flex flex-col gap-1 flex-1">
           <h3 class="font-display text-lg font-normal text-stone-cafe leading-7">{item.name}</h3>

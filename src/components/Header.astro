@@ -8,18 +8,18 @@ const navLinks = [
 ---
 
 <header
-  class="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-cream-border px-8 py-1"
+  class="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-cream-border px-4 py-1 sm:px-6 lg:px-8"
 >
-  <div class="flex items-center justify-between h-16 w-full mx-auto">
+  <div class="relative flex items-center justify-between h-14 w-full mx-auto md:h-16">
     <!-- Logo -->
     <img
       src={"/logo.png"}
       alt="Raices Logo"
-      class="w-[110px] object-contain"
+      class="w-[96px] object-contain sm:w-[110px]"
     />
 
-    <!-- Nav -->
-    <nav class="flex items-center gap-8">
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8">
       {
         navLinks.map((link) => (
           <a
@@ -37,9 +37,38 @@ const navLinks = [
       }
     </nav>
     <button
-      class="bg-green-cafe text-white text-sm font-extralight rounded-lg px-4 py-2 hover:bg-[#4a5e28] transition-colors duration-200"
+      class="hidden md:inline-flex bg-green-cafe text-white text-sm font-extralight rounded-lg px-4 py-2 hover:bg-[#4a5e28] transition-colors duration-200"
     >
       Reservar
     </button>
+
+    <!-- Mobile Nav -->
+    <details class="md:hidden">
+      <summary class="list-none cursor-pointer rounded-md p-2 text-stone-cafe hover:bg-black/5 transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </summary>
+      <nav class="absolute right-0 top-12 w-52 rounded-xl border border-cream-border bg-cream shadow-lg p-3 flex flex-col gap-2">
+        {
+          navLinks.map((link) => (
+            <a
+              href={link.href}
+              class:list={[
+                "rounded-md px-3 py-2 text-sm font-extralight transition-colors duration-200",
+                link.active
+                  ? "bg-black/5 text-stone-cafe"
+                  : "text-stone-mid hover:bg-black/5 hover:text-stone-cafe",
+              ]}
+            >
+              {link.label}
+            </a>
+          ))
+        }
+        <button class="mt-1 bg-green-cafe text-white text-sm font-extralight rounded-lg px-4 py-2 hover:bg-[#4a5e28] transition-colors duration-200">
+          Reservar
+        </button>
+      </nav>
+    </details>
   </div>
 </header>
