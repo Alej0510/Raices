@@ -1,0 +1,41 @@
+---
+const ICON_LOCAL   = 'https://www.figma.com/api/mcp/asset/a9369b5b-a560-4ea4-8364-c4bb2ce13b89';
+const ICON_TOSTION = 'https://www.figma.com/api/mcp/asset/c86a58ed-d397-46a1-aec5-2aea72bc678f';
+const ICON_COMUNIDAD = 'https://www.figma.com/api/mcp/asset/2ec0b365-4bf9-4de8-b63f-79e00ee014d6';
+
+const values = [
+  {
+    icon: ICON_LOCAL,
+    title: 'Origen Local',
+    description:
+      'Trabajamos directamente con caficultores de las veredas cercanas a Marinilla, asegurando un comercio justo y un producto fresco.',
+  },
+  {
+    icon: ICON_TOSTION,
+    title: 'Tostión Artesanal',
+    description:
+      'Cada lote se tuesta cuidadosamente para resaltar las notas únicas de chocolate y frutas de nuestra región.',
+  },
+  {
+    icon: ICON_COMUNIDAD,
+    title: 'Comunidad',
+    description:
+      'Raíces es más que una cafetería; es un punto de encuentro para compartir historias alrededor de una buena taza.',
+  },
+];
+---
+
+<section class="bg-cream border-t border-b border-[#f3ede7] px-8 py-16">
+  <div class="grid grid-cols-3 gap-8 max-w-[1280px] mx-auto">
+    {values.map(item => (
+      <div class="p-4 flex flex-col gap-4">
+        <!-- Icon -->
+        <div class="w-12 h-12 rounded-full bg-[rgba(85,107,47,0.1)] flex items-center justify-center shrink-0">
+          <img src={item.icon} alt={item.title} class="w-5 h-5 object-contain" />
+        </div>
+        <h3 class="font-display text-xl font-normal text-stone-cafe">{item.title}</h3>
+        <p class="text-sm leading-[22.75px] text-black font-extralight">{item.description}</p>
+      </div>
+    ))}
+  </div>
+</section>

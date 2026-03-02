@@ -1,0 +1,46 @@
+---
+const COFFEE_IMG  = 'https://www.figma.com/api/mcp/asset/8c4b5a02-1303-4ee1-9436-11dc32e591c7';
+const ARROW_ICON  = 'https://www.figma.com/api/mcp/asset/de1e1e37-5529-4db2-b611-2bbfa4b2ba70';
+---
+
+<section id="historia" class="bg-cream-dark px-8 py-20">
+  <div class="flex gap-20 items-center max-w-[1280px] mx-auto">
+
+    <!-- Text column -->
+    <div class="flex-1 flex flex-col gap-6">
+      <!-- Label -->
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-0.5 bg-green-cafe"></div>
+        <span class="text-green-cafe text-xs tracking-[1.2px] uppercase font-extralight">Nuestra Historia</span>
+      </div>
+
+      <h2 class="font-display text-5xl font-normal leading-tight text-stone-cafe">
+        Honrando la Tradición<br />de Antioquia
+      </h2>
+
+      <p class="text-lg leading-[29.25px] text-black font-extralight">
+        En Raíces, creemos que el café es un hilo conductor entre el pasado y el presente.
+        Nacimos con el propósito de exaltar la labor de los campesinos de Marinilla, llevando
+        lo mejor de sus cosechas a tu taza.
+      </p>
+
+      <p class="text-base leading-[26px] text-black font-extralight">
+        Nuestro espacio está diseñado para que te sientas como en casa, rodeado de aromas que
+        evocan recuerdos y sabores que despiertan los sentidos. Ven y sé parte de nuestra
+        familia cafetera.
+      </p>
+    </div>
+
+    <!-- Image column -->
+    <div class="flex-1 relative">
+      <!-- Decorative rotated bg -->
+      <div class="absolute -inset-8 bg-[rgba(85,107,47,0.2)] rounded-2xl rotate-3 -z-10"></div>
+      <img
+        src={COFFEE_IMG}
+        alt="Granos de café en saco de fique"
+        class="relative z-10 w-full h-[710px] object-cover rounded-2xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]"
+      />
+    </div>
+
+  </div>
+</section>

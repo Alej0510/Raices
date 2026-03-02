@@ -1,0 +1,45 @@
+---
+const navLinks = [
+  { label: "Inicio", href: "#", active: true },
+  { label: "Menú", href: "#menu" },
+  { label: "Historia", href: "#historia" },
+  { label: "Contacto", href: "#contacto" },
+];
+---
+
+<header
+  class="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-cream-border px-8 py-1"
+>
+  <div class="flex items-center justify-between h-16 w-full mx-auto">
+    <!-- Logo -->
+    <img
+      src={"/logo.png"}
+      alt="Raices Logo"
+      class="w-[110px] object-contain"
+    />
+
+    <!-- Nav -->
+    <nav class="flex items-center gap-8">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              "text-sm font-extralight transition-colors duration-200",
+              link.active
+                ? "text-stone-cafe"
+                : "text-stone-mid hover:text-stone-cafe",
+            ]}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+    <button
+      class="bg-green-cafe text-white text-sm font-extralight rounded-lg px-4 py-2 hover:bg-[#4a5e28] transition-colors duration-200"
+    >
+      Reservar
+    </button>
+  </div>
+</header>

@@ -1,0 +1,70 @@
+---
+const PLUS_ICON = 'https://www.figma.com/api/mcp/asset/50f9d60e-1ec6-478a-9b56-33acad2e59d8';
+
+const menuItems = [
+  {
+    image: 'https://www.figma.com/api/mcp/asset/27d05dae-36a7-4de9-8610-f8a7d02d7d57',
+    name: 'Cappuccino',
+    description: 'Espresso doble con leche texturizada cremosa.',
+    price: '$8.500',
+  },
+  {
+    image: 'https://www.figma.com/api/mcp/asset/0e83791b-639e-4d93-8ac8-6c587dcb6418',
+    name: 'Torta de Zanahoria',
+    description: 'Receta de la abuela con nueces y especias.',
+    price: '$9.000',
+  },
+  {
+    image: 'https://www.figma.com/api/mcp/asset/9238a6e0-b2d7-4910-ab45-9c125be9a798',
+    name: 'Chemex',
+    description: 'Filtrado artesanal para un perfil limpio y aromático.',
+    price: '$12.000',
+  },
+  {
+    image: 'https://www.figma.com/api/mcp/asset/41c78acc-c330-4ab6-aa15-ceb4420290c1',
+    name: 'Empanadas',
+    description: 'Tradicionales de iglesia, crocantes y deliciosas.',
+    price: '$3.500',
+  },
+];
+---
+
+<section id="menu" class="bg-cream px-8 py-20">
+  <!-- Header -->
+  <div class="text-center mb-12">
+    <h2 class="font-display text-4xl font-normal text-stone-cafe mb-2">Menú Destacado</h2>
+    <p class="text-base text-black font-extralight">
+      Desde preparaciones clásicas hasta métodos de filtrado y repostería artesanal.
+    </p>
+  </div>
+
+  <!-- Cards -->
+  <div class="grid grid-cols-4 gap-8 max-w-[1280px] mx-auto mb-20">
+    {menuItems.map(item => (
+      <div class="bg-cream rounded-xl overflow-hidden shadow-sm flex flex-col">
+        <img
+          src={item.image}
+          alt={item.name}
+          class="w-full h-[280px] object-cover"
+        />
+        <div class="p-5 flex flex-col gap-1 flex-1">
+          <h3 class="font-display text-lg font-normal text-stone-cafe leading-7">{item.name}</h3>
+          <p class="text-sm leading-5 text-black font-extralight">{item.description}</p>
+          <div class="flex items-center justify-between pt-2 mt-auto">
+            <span class="text-base text-green-cafe font-extralight">{item.price}</span>
+            <button class="w-8 h-8 rounded-full bg-green-cafe flex items-center justify-center hover:bg-[#4a5e28] transition-colors shadow-sm">
+              <img src={PLUS_ICON} alt="Agregar" class="w-2 h-2 object-contain" />
+            </button>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Ver menú completo -->
+  <div class="text-center">
+    <button class="border border-green-cafe bg-transparent rounded-lg px-6 py-2.5 text-sm text-stone-cafe font-extralight hover:bg-[#f9f8f5] transition-colors">
+      Ver Menú Completo
+    </button>
+  </div>
+</section>
