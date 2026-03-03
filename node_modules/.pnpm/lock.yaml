@@ -11,9 +11,15 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.5(astro@4.16.19(rollup@4.59.0)(typescript@5.9.3))(tailwindcss@3.4.19(yaml@2.8.2))
+      '@lucide/astro':
+        specifier: ^0.576.0
+        version: 0.576.0(astro@4.16.19(rollup@4.59.0)(typescript@5.9.3))
       astro:
         specifier: ^4.15.0
         version: 4.16.19(rollup@4.59.0)(typescript@5.9.3)
+      lucide:
+        specifier: ^0.576.0
+        version: 0.576.0
       tailwindcss:
         specifier: ^3.4.0
         version: 3.4.19(yaml@2.8.2)
@@ -407,6 +413,11 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@lucide/astro@0.576.0':
+    resolution: {integrity: sha512-TX+ySPdQ21GCdzieyasvcERPmwZwQNUoh/5nqtNwA4pLpuwp9/NRMPqPcCSXYZq0oG97SKasQ29H+FLxcRuj1Q==}
+    peerDependencies:
+      astro: ^4 || ^5
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1141,6 +1152,9 @@ packages:
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
+
+  lucide@0.576.0:
+    resolution: {integrity: sha512-R8OBTUFiPq4BZ7LxRNZECDvBa/8MKgTqcF5N1iifqyPSGD7lT8ymV9103di01b+6xjhPsqlh7hlSxqNcJEK1eg==}
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
@@ -2175,6 +2189,10 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
+  '@lucide/astro@0.576.0(astro@4.16.19(rollup@4.59.0)(typescript@5.9.3))':
+    dependencies:
+      astro: 4.16.19(rollup@4.59.0)(typescript@5.9.3)
+
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -2919,6 +2937,8 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  lucide@0.576.0: {}
 
   magic-string@0.30.21:
     dependencies:
