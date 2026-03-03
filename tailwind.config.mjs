@@ -10,10 +10,10 @@ export default {
           border: '#e2dcd0',
         },
         green: {
-          cafe: '#556b2f',
+          cafe: '#6b823e',
         },
         stone: {
-          cafe: '#292524',
+          cafe: '#171716',
           mid: '#44403c',
         },
         warm: '#f3ede7',
