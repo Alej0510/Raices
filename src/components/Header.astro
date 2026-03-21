@@ -1,22 +1,26 @@
 ---
 const navLinks = [
-  { label: "Inicio", href: "#", active: true },
-  { label: "Menú", href: "#menu" },
-  { label: "Historia", href: "#historia" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Inicio", href: "/", active: true },
+  { label: "Menú", href: "/menu" },
+  { label: "Historia", href: "/#historia" },
+  { label: "Contacto", href: "/#contacto" },
 ];
 ---
 
 <header
   class="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-green-cafe px-4 py-1 sm:px-6 lg:px-8"
 >
-  <div class="relative flex items-center justify-between h-14 w-full mx-auto md:h-16">
+  <div
+    class="relative flex items-center justify-between h-14 w-full mx-auto md:h-16"
+  >
     <!-- Logo -->
-    <img
-      src={"/logo.png"}
-      alt="Raices Logo"
-      class="w-[96px] object-contain sm:w-[110px]"
-    />
+    <a href="/">
+      <img
+        src={"/logo.png"}
+        alt="Raices Logo"
+        class="w-[96px] object-contain sm:w-[110px]"
+      />
+    </a>
 
     <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center gap-8">
@@ -39,12 +43,25 @@ const navLinks = [
 
     <!-- Mobile Nav -->
     <details class="md:hidden">
-      <summary class="list-none cursor-pointer rounded-md p-2 text-stone-cafe hover:bg-black/5 transition-colors">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      <summary
+        class="list-none cursor-pointer rounded-md p-2 text-stone-cafe hover:bg-black/5 transition-colors"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </summary>
-      <nav class="absolute right-0 top-12 w-52 rounded-xl border border-cream-border bg-cream shadow-lg p-3 flex flex-col gap-2">
+      <nav
+        class="absolute right-0 top-12 w-52 rounded-xl border border-cream-border bg-cream shadow-lg p-3 flex flex-col gap-2"
+      >
         {
           navLinks.map((link) => (
             <a

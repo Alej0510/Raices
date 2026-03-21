@@ -1,0 +1,51 @@
+---
+const menuItems = await Astro.glob("../../content/menu/withCoffee/*.md");
+
+// Sort by index if available
+menuItems.sort((a, b) => {
+  const indexA = a.frontmatter.index ?? 999;
+  const indexB = b.frontmatter.index ?? 999;
+  return indexA - indexB;
+});
+
+const formatPrice = (price: number) => {
+  return "$" + price.toLocaleString("es-CO");
+};
+---
+
+<section class="mb-16">
+  <div class="mb-8">
+    <h2
+      class="font-display text-3xl font-normal text-stone-cafe mb-3 flex items-center gap-3"
+    >
+      Con Café
+      <div class="h-px bg-green-cafe/30 flex-grow"></div>
+    </h2>
+    <p class="text-sm text-black font-extralight">
+      Nuestras preparaciones clásicas y de especialidad a base de café.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2">
+    {
+      menuItems.map((item) => (
+        <div class="flex flex-col border-b border-green-cafe/10 py-4 last:border-b-0 md:last:border-b-[rgba(107,130,62,0.1)]">
+          <div class="flex justify-between items-baseline gap-4">
+            <h3 class="font-display text-lg font-normal text-stone-cafe">
+              {item.frontmatter.title}
+            </h3>
+            <div class="flex-grow border-b border-dotted border-stone-cafe/30 mx-2 relative top-[-6px]" />
+            <span class="text-base text-green-cafe font-semibold whitespace-nowrap">
+              {formatPrice(item.frontmatter.price)}
+            </span>
+          </div>
+          {item.frontmatter.description && (
+            <p class="text-sm leading-5 text-black font-extralight mt-1 md:pr-8">
+              {item.frontmatter.description}
+            </p>
+          )}
+        </div>
+      ))
+    }
+  </div>
+</section>

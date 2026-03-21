@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import WithCoffee from "../components/menu/WithCoffee.astro";
+import WithoutCoffee from "../components/menu/WithoutCoffee.astro";
+import WithAlcohol from "../components/menu/WithAlcohol.astro";
+---
+
+<Layout title="Menú - Raíces Café">
+  <Header />
+  <main class="pt-28 pb-20 bg-cream">
+    <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Menu Header -->
+      <div class="text-center mb-16">
+        <span
+          class="text-green-cafe font-semibold tracking-widest2 text-sm uppercase mb-3 block"
+          >Descubre</span
+        >
+        <h1
+          class="font-display text-5xl md:text-6xl font-normal text-stone-cafe mb-5"
+        >
+          Nuestro Menú
+        </h1>
+        <p class="text-base text-black font-extralight max-w-2xl mx-auto">
+          Preparaciones elaboradas con dedicación, resaltando los mejores
+          sabores de nuestra tierra para brindarte una experiencia única.
+        </p>
+      </div>
+
+      <!-- Menu Card wrapper -->
+      <div
+        class="bg-white rounded-3xl p-6 md:p-12 shadow-sm border border-cream-border relative"
+      >
+        <!-- Decorative elements -->
+        <div
+          class="absolute top-0 left-0 w-full h-2 bg-green-cafe rounded-t-3xl opacity-80"
+        >
+        </div>
+        <div
+          class="absolute bottom-0 left-0 w-full h-2 bg-green-cafe rounded-b-3xl opacity-80"
+        >
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-12">
+          <WithCoffee />
+          <WithAlcohol />
+          <WithoutCoffee />
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
