@@ -141,9 +141,30 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"menu": {
+"withAlcohol/AmarettoCappuccino.md": {
+	id: "withAlcohol/AmarettoCappuccino.md";
+  slug: "withalcohol/amarettocappuccino";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"withAlcohol/BaileysCappuccino.md": {
+	id: "withAlcohol/BaileysCappuccino.md";
+  slug: "withalcohol/baileyscappuccino";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
 "withAlcohol/IrishCoffee.md": {
 	id: "withAlcohol/IrishCoffee.md";
   slug: "withalcohol/irishcoffee";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"withAlcohol/WhiskeyCappuccino.md": {
+	id: "withAlcohol/WhiskeyCappuccino.md";
+  slug: "withalcohol/whiskeycappuccino";
   body: string;
   collection: "menu";
   data: any
@@ -214,6 +235,13 @@ declare module 'astro:content' {
 "withCoffee/Moccaccino.md": {
 	id: "withCoffee/Moccaccino.md";
   slug: "withcoffee/moccaccino";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"withCoffee/TropicalAffogato.md": {
+	id: "withCoffee/TropicalAffogato.md";
+  slug: "withcoffee/tropicalaffogato";
   body: string;
   collection: "menu";
   data: any

@@ -23,16 +23,22 @@ const values = [
 ];
 ---
 
-<section class="bg-cream border-t border-b border-[#f3ede7] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-  <div class="grid grid-cols-1 gap-6 max-w-[1280px] mx-auto md:grid-cols-3 md:gap-8">
+<section class="bg-warm border-t border-b border-cream-border px-4 py-16 sm:px-6 sm:py-24 lg:px-8 relative overflow-hidden">
+  <!-- Decorative background circle -->
+  <div class="absolute -top-40 -right-40 w-96 h-96 bg-cream-dark rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+  <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-cream-dark rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+  <div class="relative grid grid-cols-1 gap-8 max-w-[1280px] mx-auto md:grid-cols-3 md:gap-12 z-10">
     {values.map(item => (
-      <div class="p-4 flex flex-col gap-4 text-center md:text-left">
+      <div class="p-8 flex flex-col gap-5 text-center items-center md:items-start md:text-left bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-white hover:border-green-cafe/20 group transform hover:-translate-y-1">
         <!-- Icon -->
-        <div class="w-12 h-12 rounded-full bg-[rgba(85,107,47,0.1)] flex items-center justify-center shrink-0 mx-auto md:mx-0">
-          <item.icon />
+        <div class="w-16 h-16 rounded-2xl bg-cream flex items-center justify-center shrink-0 group-hover:bg-green-cafe/10 transition-colors duration-300">
+          <item.icon class="w-7 h-7 text-green-cafe" />
         </div>
-        <h3 class="font-display text-xl font-normal text-stone-cafe">{item.title}</h3>
-        <p class="text-sm leading-[22.75px] text-black font-extralight">{item.description}</p>
+        <div class="space-y-3">
+          <h3 class="font-display text-2xl font-normal text-stone-cafe">{item.title}</h3>
+          <p class="text-base leading-relaxed text-stone-mid font-light">{item.description}</p>
+        </div>
       </div>
     ))}
   </div>

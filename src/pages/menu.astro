@@ -4,11 +4,12 @@ import Header from "../components/Header.astro";
 import WithCoffee from "../components/menu/WithCoffee.astro";
 import WithoutCoffee from "../components/menu/WithoutCoffee.astro";
 import WithAlcohol from "../components/menu/WithAlcohol.astro";
+import VisitUs from "../components/VisitUs.astro";
 ---
 
 <Layout title="Menú - Raíces Café">
   <Header />
-  <main class="pt-28 pb-20 bg-cream">
+  <main class="pt-20 pb-20 bg-cream">
     <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Menu Header -->
       <div class="text-center mb-16">
@@ -49,4 +50,5 @@ import WithAlcohol from "../components/menu/WithAlcohol.astro";
       </div>
     </div>
   </main>
+  <VisitUs />
 </Layout>
