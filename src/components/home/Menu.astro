@@ -41,9 +41,11 @@ const menuItems = [
       menuItems.map((item) => (
         <div class="bg-white rounded-3xl border border-cream-border overflow-hidden shadow-sm hover:shadow-xl hover:border-green-cafe/30 transition-all duration-300 flex flex-col group transform hover:-translate-y-2 w-full sm:w-1/2">
           <div class="overflow-hidden relative">
-            <img
+            <Image
               src={item.image}
               alt={item.name}
+              width={1920}
+              height={1080}
               class="w-full h-[240px] object-cover sm:h-[280px] lg:h-[320px] group-hover:scale-105 transition-transform duration-700 ease-out"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-stone-cafe/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 const coffeeBeans = "/home/coffeeBeans.png";
 ---
 
@@ -27,20 +29,16 @@ const coffeeBeans = "/home/coffeeBeans.png";
       </h2>
 
       <div class="space-y-6">
-        <p
-          class="text-lg leading-relaxed text-stone-mid font-light sm:text-xl"
-        >
-          En Raíces, creemos que el café es un hilo conductor entre el pasado y el
-          presente. Nacimos con el propósito de exaltar la labor de los campesinos
-          de Marinilla, llevando lo mejor de sus cosechas a tu taza.
+        <p class="text-lg leading-relaxed text-stone-mid font-light sm:text-xl">
+          En Raíces, creemos que el café es un hilo conductor entre el pasado y
+          el presente. Nacimos con el propósito de exaltar la labor de los
+          campesinos de Marinilla, llevando lo mejor de sus cosechas a tu taza.
         </p>
 
-        <p
-          class="text-lg leading-relaxed text-stone-mid font-light sm:text-xl"
-        >
-          Nuestro espacio está diseñado para que te sientas como en casa, rodeado
-          de aromas que evocan recuerdos y sabores que despiertan los sentidos.
-          Ven y sé parte de nuestra familia cafetera.
+        <p class="text-lg leading-relaxed text-stone-mid font-light sm:text-xl">
+          Nuestro espacio está diseñado para que te sientas como en casa,
+          rodeado de aromas que evocan recuerdos y sabores que despiertan los
+          sentidos. Ven y sé parte de nuestra familia cafetera.
         </p>
       </div>
     </div>
@@ -55,9 +53,11 @@ const coffeeBeans = "/home/coffeeBeans.png";
         class="absolute -inset-4 bg-cream/50 rounded-[2.5rem] -rotate-2 -z-20 sm:-inset-6 transition-transform duration-500 group-hover:-rotate-4"
       >
       </div>
-      <img
+      <Image
         src={coffeeBeans}
         alt="Granos de café en saco de fique"
+        width={1920}
+        height={1080}
         class="relative z-10 w-full h-[400px] object-cover rounded-[2rem] shadow-2xl sm:h-[520px] lg:h-[710px] transform transition-transform duration-700 hover:scale-[1.02]"
       />
     </div>
