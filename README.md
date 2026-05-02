@@ -1,6 +1,6 @@
 # **Raíces Cafe**
 
-Official repository for Raíces Café, a specialty coffee shop located in Marinilla, Antioquia.
+Official repository for Raíces Cafe, a specialty coffee shop located in Marinilla, Antioquia.
 
 ![Raíces Café](mockup.png)
 
