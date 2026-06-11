@@ -141,30 +141,51 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"menu": {
-"withAlcohol/AmarettoCappuccino.md": {
-	id: "withAlcohol/AmarettoCappuccino.md";
-  slug: "withalcohol/amarettocappuccino";
+"Food/LasagnaMixta.md": {
+	id: "Food/LasagnaMixta.md";
+  slug: "food/lasagnamixta";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withAlcohol/BaileysCappuccino.md": {
-	id: "withAlcohol/BaileysCappuccino.md";
-  slug: "withalcohol/baileyscappuccino";
+"Food/WaffleConHelado.md": {
+	id: "Food/WaffleConHelado.md";
+  slug: "food/waffleconhelado";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withAlcohol/IrishCoffee.md": {
-	id: "withAlcohol/IrishCoffee.md";
-  slug: "withalcohol/irishcoffee";
+"Food/WrapPollo.md": {
+	id: "Food/WrapPollo.md";
+  slug: "food/wrappollo";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withAlcohol/WhiskeyCappuccino.md": {
-	id: "withAlcohol/WhiskeyCappuccino.md";
-  slug: "withalcohol/whiskeycappuccino";
+"withAlcohol/CafeIrlandes.md": {
+	id: "withAlcohol/CafeIrlandes.md";
+  slug: "withalcohol/cafeirlandes";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"withAlcohol/CapuchinoConAmaretto.md": {
+	id: "withAlcohol/CapuchinoConAmaretto.md";
+  slug: "withalcohol/capuchinoconamaretto";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"withAlcohol/CapuchinoConBaileys.md": {
+	id: "withAlcohol/CapuchinoConBaileys.md";
+  slug: "withalcohol/capuchinoconbaileys";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"withAlcohol/CapuchinoConWhiskey.md": {
+	id: "withAlcohol/CapuchinoConWhiskey.md";
+  slug: "withalcohol/capuchinoconwhiskey";
   body: string;
   collection: "menu";
   data: any
@@ -176,30 +197,30 @@ declare module 'astro:content' {
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/American.md": {
-	id: "withCoffee/American.md";
-  slug: "withcoffee/american";
+"withCoffee/AffogatoTropical.md": {
+	id: "withCoffee/AffogatoTropical.md";
+  slug: "withcoffee/affogatotropical";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/BombonCoffee.md": {
-	id: "withCoffee/BombonCoffee.md";
-  slug: "withcoffee/bomboncoffee";
+"withCoffee/Americano.md": {
+	id: "withCoffee/Americano.md";
+  slug: "withcoffee/americano";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/Capuccino.md": {
-	id: "withCoffee/Capuccino.md";
-  slug: "withcoffee/capuccino";
+"withCoffee/CafeBombon.md": {
+	id: "withCoffee/CafeBombon.md";
+  slug: "withcoffee/cafebombon";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/DoubleEspresso.md": {
-	id: "withCoffee/DoubleEspresso.md";
-  slug: "withcoffee/doubleespresso";
+"withCoffee/Capuchino.md": {
+	id: "withCoffee/Capuchino.md";
+  slug: "withcoffee/capuchino";
   body: string;
   collection: "menu";
   data: any
@@ -207,6 +228,13 @@ declare module 'astro:content' {
 "withCoffee/Espresso.md": {
 	id: "withCoffee/Espresso.md";
   slug: "withcoffee/espresso";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"withCoffee/EspressoDoble.md": {
+	id: "withCoffee/EspressoDoble.md";
+  slug: "withcoffee/espressodoble";
   body: string;
   collection: "menu";
   data: any
@@ -232,23 +260,23 @@ declare module 'astro:content' {
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/Moccaccino.md": {
-	id: "withCoffee/Moccaccino.md";
-  slug: "withcoffee/moccaccino";
+"withCoffee/Mocaccino.md": {
+	id: "withCoffee/Mocaccino.md";
+  slug: "withcoffee/mocaccino";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/TropicalAffogato.md": {
-	id: "withCoffee/TropicalAffogato.md";
-  slug: "withcoffee/tropicalaffogato";
+"withoutCoffee/ChocolateConAgua.md": {
+	id: "withoutCoffee/ChocolateConAgua.md";
+  slug: "withoutcoffee/chocolateconagua";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withoutCoffee/MilkChocolate.md": {
-	id: "withoutCoffee/MilkChocolate.md";
-  slug: "withoutcoffee/milkchocolate";
+"withoutCoffee/ChocolateConLeche.md": {
+	id: "withoutCoffee/ChocolateConLeche.md";
+  slug: "withoutcoffee/chocolateconleche";
   body: string;
   collection: "menu";
   data: any
@@ -260,9 +288,30 @@ declare module 'astro:content' {
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withoutCoffee/WaterChocolate.md": {
-	id: "withoutCoffee/WaterChocolate.md";
-  slug: "withoutcoffee/waterchocolate";
+"withoutCoffee/SodaFrutosAmarillos.md": {
+	id: "withoutCoffee/SodaFrutosAmarillos.md";
+  slug: "withoutcoffee/sodafrutosamarillos";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"withoutCoffee/SodaFrutosRojos.md": {
+	id: "withoutCoffee/SodaFrutosRojos.md";
+  slug: "withoutcoffee/sodafrutosrojos";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"withoutCoffee/SodaLychee.md": {
+	id: "withoutCoffee/SodaLychee.md";
+  slug: "withoutcoffee/sodalychee";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"withoutCoffee/SodaMango.md": {
+	id: "withoutCoffee/SodaMango.md";
+  slug: "withoutcoffee/sodamango";
   body: string;
   collection: "menu";
   data: any
