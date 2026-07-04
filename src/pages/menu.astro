@@ -9,7 +9,15 @@ import Food from "../components/menu/Food.astro";
 import { smoothTransition } from "../utils/transitions";
 ---
 
-<Layout title="Menú - Raíces Café">
+<Layout
+  title="Menú | Raíces Café"
+  description="Explora el menú de Raíces Café: cafés de especialidad, bebidas sin café, preparaciones con alcohol y delicias para acompañar en Marinilla."
+  canonical="/menu"
+  breadcrumbs={[
+    { name: "Inicio", item: "/" },
+    { name: "Menú", item: "/menu" },
+  ]}
+>
   <Header />
   <main class="pt-20 pb-20 bg-cream" transition:animate={smoothTransition}>
     <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8">

@@ -17,11 +17,13 @@ const navLinks = [
     class="relative flex items-center justify-between h-14 w-full mx-auto md:h-16"
   >
     <!-- Logo -->
-    <a href="/">
+    <a href="/" aria-label="Raíces Café - Inicio">
       <img
         src={"/logo.png"}
-        alt="Raices Logo"
+        alt="Raíces Café - Café de especialidad en Marinilla"
         class="w-[96px] object-contain sm:w-[110px]"
+        width="110"
+        height="43"
         transition:name="logo"
       />
     </a>
@@ -34,6 +36,7 @@ const navLinks = [
           return (
             <a
               href={link.href}
+              aria-current={isActive ? "page" : undefined}
               class:list={[
                 "text-sm font-extralight transition-colors duration-200",
                 isActive
@@ -75,6 +78,7 @@ const navLinks = [
             return (
               <a
                 href={link.href}
+                aria-current={isActive ? "page" : undefined}
                 class:list={[
                   "rounded-md px-3 py-2 text-sm font-extralight transition-colors duration-200",
                   isActive

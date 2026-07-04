@@ -9,7 +9,11 @@ import VisitUs from "../components/VisitUs.astro";
 import { smoothTransition } from "../utils/transitions";
 ---
 
-<Layout>
+<Layout
+  title="Raíces Café | Café de Especialidad en Marinilla"
+  description="Descubre Raíces Café en Marinilla, Antioquia. Café de especialidad, preparaciones artesanales y un espacio que honra nuestras raíces."
+  canonical="/"
+>
   <Header />
   <main transition:animate={smoothTransition}>
     <Hero />

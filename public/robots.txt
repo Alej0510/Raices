@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raices-cafe.vercel.app/sitemap-index.xml

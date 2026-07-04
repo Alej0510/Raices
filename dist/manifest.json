@@ -1,0 +1,19 @@
+{
+  "name": "Raíces Café",
+  "short_name": "Raíces",
+  "description": "Café de especialidad en Marinilla, Antioquia. Un homenaje a la tierra, la tradición y cada grano cultivado con pasión.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F5F0",
+  "theme_color": "#6b823e",
+  "lang": "es",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/home/coffeeBeans.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

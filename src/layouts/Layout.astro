@@ -4,10 +4,84 @@ import "../styles/global.css";
 
 interface Props {
   title?: string;
+  description?: string;
+  image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageAlt?: string;
+  canonical?: string;
+  breadcrumbs?: { name: string; item: string }[];
 }
 
-const { title = "Raíces Café" } = Astro.props;
-let logo = "/logo.png";
+const {
+  title = "Raíces Café",
+  description = "Café de especialidad en Marinilla, Antioquia. Un homenaje a la tierra, la tradición y cada grano cultivado con pasión.",
+  image = "/logo.png",
+  imageWidth = 1045,
+  imageHeight = 411,
+  imageAlt = "Logo de Raíces Café en Marinilla, Antioquia",
+  canonical,
+  breadcrumbs,
+} = Astro.props;
+
+const siteUrl = "https://raices-cafe.vercel.app";
+const pathname = Astro.url.pathname === "/" ? "" : Astro.url.pathname;
+const pagePath = canonical === "/" ? "" : (canonical ?? pathname);
+const pageUrl = `${siteUrl}${pagePath}`;
+const absoluteImage = `${siteUrl}${image}`;
+
+const localBusiness = {
+  "@type": "CafeOrCoffeeShop",
+  name: "Raíces Café",
+  description,
+  image: `${siteUrl}/logo.png`,
+  url: siteUrl,
+  telephone: "+57-314-625-7790",
+  email: "elmati@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Calle 12, Marinilla-Rionegro #45 46",
+    addressLocality: "Marinilla",
+    addressRegion: "Antioquia",
+    addressCountry: "CO",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 6.1694209,
+    longitude: -75.3496963,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "08:00",
+      closes: "20:00",
+    },
+  ],
+  priceRange: "$$",
+  servesCuisine: "Café de especialidad",
+  paymentAccepted: "Efectivo, tarjeta de crédito, tarjeta débito, transferencia",
+  currenciesAccepted: "COP",
+  sameAs: [],
+};
+
+const breadcrumbList = breadcrumbs && breadcrumbs.length > 0 ? {
+  "@type": "BreadcrumbList",
+  itemListElement: breadcrumbs.map((crumb, index) => {
+    const itemPath = crumb.item === "/" ? "" : crumb.item;
+    return {
+      "@type": "ListItem",
+      position: index + 1,
+      name: crumb.name,
+      item: crumb.item.startsWith("http") ? crumb.item : `${siteUrl}${itemPath}`,
+    };
+  }),
+} : null;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": breadcrumbList ? [localBusiness, breadcrumbList] : [localBusiness],
+};
 ---
 
 <!doctype html>
@@ -16,8 +90,50 @@ let logo = "/logo.png";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#6b823e" />
+    <meta name="author" content="Raíces Café" />
+    <meta name="geo.region" content="CO-ANT" />
+    <meta name="geo.placename" content="Marinilla, Antioquia" />
+    <meta name="geo.position" content="6.1694209;-75.3496963" />
+    <meta name="ICBM" content="6.1694209, -75.3496963" />
+
+    <link rel="canonical" href={pageUrl} />
+    <link rel="alternate" hreflang="es" href={pageUrl} />
+    <link rel="alternate" hreflang="x-default" href={siteUrl} />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Raíces Café" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:image" content={absoluteImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content={String(imageWidth)} />
+    <meta property="og:image:height" content={String(imageHeight)} />
+    <meta property="og:image:alt" content={imageAlt} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteImage} />
+    <meta name="twitter:image:alt" content={imageAlt} />
+
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.google.com" />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
     <ViewTransitions />
   </head>
   <body>
