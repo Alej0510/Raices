@@ -6,11 +6,12 @@ import WithoutCoffee from "../components/menu/WithoutCoffee.astro";
 import WithAlcohol from "../components/menu/WithAlcohol.astro";
 import VisitUs from "../components/VisitUs.astro";
 import Food from "../components/menu/Food.astro";
+import { smoothTransition } from "../utils/transitions";
 ---
 
 <Layout title="Menú - Raíces Café">
   <Header />
-  <main class="pt-20 pb-20 bg-cream">
+  <main class="pt-20 pb-20 bg-cream" transition:animate={smoothTransition}>
     <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Menu Header -->
       <div class="text-center mb-16">

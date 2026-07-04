@@ -6,11 +6,12 @@ import Values from "../components/home/Values.astro";
 import History from "../components/home/History.astro";
 import Menu from "../components/home/Menu.astro";
 import VisitUs from "../components/VisitUs.astro";
+import { smoothTransition } from "../utils/transitions";
 ---
 
 <Layout>
   <Header />
-  <main>
+  <main transition:animate={smoothTransition}>
     <Hero />
     <Values />
     <History />

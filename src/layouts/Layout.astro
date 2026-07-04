@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import "../styles/global.css";
 
 interface Props {
@@ -17,6 +18,7 @@ let logo = "/logo.png";
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <ViewTransitions />
   </head>
   <body>
     <slot />
@@ -28,6 +30,7 @@ let logo = "/logo.png";
       rel="noopener noreferrer"
       class="fixed bottom-6 right-6 z-50 bg-green-cafe text-white p-4 rounded-full shadow-lg hover:bg-[#4a5e28] transition-all duration-300 group"
       aria-label="Contactar por WhatsApp"
+      transition:persist="whatsapp-bubble"
     >
       <svg fill="none" viewBox="0 0 360 362" class="w-6 h-6">
         <path

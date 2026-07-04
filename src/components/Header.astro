@@ -1,6 +1,8 @@
 ---
+const currentPath = Astro.url.pathname;
+
 const navLinks = [
-  { label: "Inicio", href: "/", active: true },
+  { label: "Inicio", href: "/" },
   { label: "Menú", href: "/menu" },
   { label: "Historia", href: "/#historia" },
   { label: "Contacto", href: "/#contacto" },
@@ -9,6 +11,7 @@ const navLinks = [
 
 <header
   class="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-green-cafe px-4 py-1 sm:px-6 lg:px-8"
+  transition:persist="header"
 >
   <div
     class="relative flex items-center justify-between h-14 w-full mx-auto md:h-16"
@@ -19,25 +22,29 @@ const navLinks = [
         src={"/logo.png"}
         alt="Raices Logo"
         class="w-[96px] object-contain sm:w-[110px]"
+        transition:name="logo"
       />
     </a>
 
     <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center gap-8">
       {
-        navLinks.map((link) => (
-          <a
-            href={link.href}
-            class:list={[
-              "text-sm font-extralight transition-colors duration-200",
-              link.active
-                ? "text-stone-cafe"
-                : "text-stone-mid hover:text-stone-cafe",
-            ]}
-          >
-            {link.label}
-          </a>
-        ))
+        navLinks.map((link) => {
+          const isActive = currentPath === link.href;
+          return (
+            <a
+              href={link.href}
+              class:list={[
+                "text-sm font-extralight transition-colors duration-200",
+                isActive
+                  ? "text-stone-cafe"
+                  : "text-stone-mid hover:text-stone-cafe",
+              ]}
+            >
+              {link.label}
+            </a>
+          );
+        })
       }
     </nav>
 
@@ -63,16 +70,22 @@ const navLinks = [
         class="absolute right-0 top-12 w-52 rounded-xl border border-cream-border bg-cream shadow-lg p-3 flex flex-col gap-2"
       >
         {
-          navLinks.map((link) => (
-            <a
-              href={link.href}
-              class:list={[
-                "rounded-md px-3 py-2 text-sm font-extralight transition-colors duration-200 text-stone-mid hover:bg-black/5 hover:text-stone-cafe",
-              ]}
-            >
-              {link.label}
-            </a>
-          ))
+          navLinks.map((link) => {
+            const isActive = currentPath === link.href;
+            return (
+              <a
+                href={link.href}
+                class:list={[
+                  "rounded-md px-3 py-2 text-sm font-extralight transition-colors duration-200",
+                  isActive
+                    ? "text-stone-cafe"
+                    : "text-stone-mid hover:bg-black/5 hover:text-stone-cafe",
+                ]}
+              >
+                {link.label}
+              </a>
+            );
+          })
         }
       </nav>
     </details>
