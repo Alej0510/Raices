@@ -23,23 +23,36 @@ const values = [
 ];
 ---
 
-<section class="bg-warm border-t border-b border-cream-border px-4 py-16 sm:px-6 sm:py-24 lg:px-8 relative overflow-hidden">
+<section class="bg-warm border-t border-b border-cream-border px-4 py-20 sm:px-6 sm:py-28 lg:px-8 relative overflow-hidden">
   <!-- Decorative background circle -->
-  <div class="absolute -top-40 -right-40 w-96 h-96 bg-cream-dark rounded-full blur-3xl opacity-50 pointer-events-none"></div>
-  <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-cream-dark rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+  <div class="absolute -top-40 -right-40 w-[28rem] h-[28rem] bg-cream-dark rounded-full blur-[120px] opacity-60 pointer-events-none"></div>
+  <div class="absolute -bottom-40 -left-40 w-[28rem] h-[28rem] bg-cream-dark rounded-full blur-[120px] opacity-60 pointer-events-none"></div>
 
-  <div class="relative grid grid-cols-1 gap-8 max-w-[1280px] mx-auto md:grid-cols-3 md:gap-12 z-10">
-    {values.map(item => (
-      <div class="p-8 flex flex-col gap-5 text-center items-center md:items-start md:text-left bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-white hover:border-green-cafe/20 group transform hover:-translate-y-1">
-        <!-- Icon -->
-        <div class="w-16 h-16 rounded-2xl bg-cream flex items-center justify-center shrink-0 group-hover:bg-green-cafe/10 transition-colors duration-300">
-          <item.icon class="w-7 h-7 text-green-cafe" />
+  <div class="relative max-w-[1280px] mx-auto z-10">
+    <!-- Section header -->
+    <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+      <span class="text-green-cafe text-sm tracking-[0.2em] uppercase font-medium">Nuestros Valores</span>
+      <h2 class="font-display text-4xl sm:text-5xl font-normal text-stone-cafe mt-3 leading-tight">
+        Lo que nos hace <span class="italic">únicos</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
+      {values.map((item, index) => (
+        <div class:list={[
+          "group p-8 flex flex-col gap-5 text-center items-center md:items-start md:text-left bg-white rounded-[2rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-white hover:border-green-cafe/20 transform hover:-translate-y-2 reveal",
+          `reveal-delay-${index + 1}`,
+        ]}>
+          <!-- Icon -->
+          <div class="w-16 h-16 rounded-2xl bg-cream flex items-center justify-center shrink-0 group-hover:bg-green-cafe group-hover:text-white text-green-cafe transition-all duration-300 shadow-inner">
+            <item.icon class="w-7 h-7" />
+          </div>
+          <div class="space-y-3">
+            <h3 class="font-display text-2xl font-normal text-stone-cafe group-hover:text-green-cafe transition-colors duration-300">{item.title}</h3>
+            <p class="text-base leading-relaxed text-stone-mid font-light">{item.description}</p>
+          </div>
         </div>
-        <div class="space-y-3">
-          <h3 class="font-display text-2xl font-normal text-stone-cafe">{item.title}</h3>
-          <p class="text-base leading-relaxed text-stone-mid font-light">{item.description}</p>
-        </div>
-      </div>
-    ))}
+      ))}
+    </div>
   </div>
 </section>

@@ -25,6 +25,25 @@ export default {
       letterSpacing: {
         widest2: '1.2px',
       },
+      animation: {
+        'ken-burns': 'kenBurns 22s ease-in-out infinite alternate',
+        'float': 'float 6s ease-in-out infinite',
+        'fade-in': 'fadeIn 1s ease-out forwards',
+      },
+      keyframes: {
+        kenBurns: {
+          '0%': { transform: 'scale(1) translate(0, 0)' },
+          '100%': { transform: 'scale(1.1) translate(-1%, -1%)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-12px)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
     },
   },
   plugins: [],

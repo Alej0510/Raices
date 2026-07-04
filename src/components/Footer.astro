@@ -1,0 +1,151 @@
+---
+import { Instagram, MapPin, Clock, Phone } from "@lucide/astro";
+
+const contactItems = [
+  {
+    icon: MapPin,
+    title: "Dirección",
+    lines: ["Calle 12, Marinilla-Rionegro #45 46", "Marinilla, Antioquia"],
+  },
+  {
+    icon: Clock,
+    title: "Horario",
+    lines: ["Lunes - Sábado: 8:00 AM - 8:00 PM"],
+  },
+  {
+    icon: Phone,
+    title: "Contacto",
+    lines: [
+      { text: "+57 314 625 7790", href: "tel:+573146257790" },
+      "",
+      { text: "elmati@gmail.com", href: "mailto:elmati@gmail.com" },
+    ],
+  },
+];
+---
+
+<section
+  id="contacto"
+  class="bg-stone-cafe px-4 py-16 sm:px-6 sm:py-20 lg:px-8 relative overflow-hidden"
+>
+  <!-- Background texture -->
+  <div
+    class="absolute inset-0 opacity-[0.03] pointer-events-none"
+    style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"
+  >
+  </div>
+
+  <div
+    class="max-w-[1280px] mx-auto flex flex-col gap-14 sm:gap-20 animate-on-scroll relative z-10"
+  >
+    <div class="flex flex-col gap-12 items-start lg:flex-row lg:gap-16">
+      <!-- Info column -->
+      <div class="flex-1 flex flex-col gap-10">
+        <div>
+          <h2
+            class="font-display text-4xl sm:text-5xl font-normal text-green-cafe mt-3 mb-3"
+          >
+            Visítanos
+          </h2>
+          <p class="text-warm/90 text-lg font-light">
+            Te esperamos con el mejor café de Marinilla.
+          </p>
+        </div>
+
+        <!-- Contact items -->
+        <address class="flex flex-col gap-5 not-italic">
+          {
+            contactItems.map((item) => (
+              <div class="flex gap-5 items-center p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors duration-300">
+                <div class="w-12 h-12 rounded-xl bg-green-cafe/20 flex items-center justify-center shrink-0">
+                  <item.icon
+                    size={24}
+                    class="text-green-cafe"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div>
+                  <h3 class="text-white text-lg font-light leading-7 mb-1">
+                    {item.title}
+                  </h3>
+                  {item.lines.map((line) =>
+                    typeof line === "string" ? (
+                      <p class="text-warm/80 text-base font-light leading-6">
+                        {line}
+                      </p>
+                    ) : (
+                      <a
+                        href={line.href}
+                        class="text-warm/80 text-base font-light leading-6 hover:text-green-cafe transition-colors"
+                      >
+                        {line.text}
+                      </a>
+                    ),
+                  )}
+                </div>
+              </div>
+            ))
+          }
+        </address>
+
+        <!-- Social links     
+        <div class="flex gap-4 pt-4">
+          <a href="#" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">
+            <svg fill="none" viewBox="0 0 360 362" class="text-green-cafe w-6 h-6"><path fill="currentColor" fill-rule="evenodd" d="M307.546 52.566C273.709 18.684 228.706.017 180.756 0 81.951 0 1.538 80.404 1.504 179.235c-.017 31.594 8.242 62.432 23.928 89.609L0 361.736l95.024-24.925c26.179 14.285 55.659 21.805 85.655 21.814h.077c98.788 0 179.21-80.413 179.244-179.244.017-47.898-18.608-92.926-52.454-126.807v-.008Zm-126.79 275.788h-.06c-26.73-.008-52.952-7.194-75.831-20.765l-5.44-3.231-56.391 14.791 15.05-54.981-3.542-5.638c-14.912-23.721-22.793-51.139-22.776-79.286.035-82.14 66.867-148.973 149.051-148.973 39.793.017 77.198 15.53 105.328 43.695 28.131 28.157 43.61 65.596 43.593 105.398-.035 82.149-66.867 148.982-148.982 148.982v.008Zm81.719-111.577c-4.478-2.243-26.497-13.073-30.606-14.568-4.108-1.496-7.09-2.243-10.073 2.243-2.982 4.487-11.568 14.577-14.181 17.559-2.613 2.991-5.226 3.361-9.704 1.117-4.477-2.243-18.908-6.97-36.02-22.226-13.313-11.878-22.304-26.54-24.916-31.027-2.613-4.486-.275-6.91 1.959-9.136 2.011-2.011 4.478-5.234 6.721-7.847 2.244-2.613 2.983-4.486 4.478-7.469 1.496-2.991.748-5.603-.369-7.847-1.118-2.243-10.073-24.289-13.812-33.253-3.636-8.732-7.331-7.546-10.073-7.692-2.613-.13-5.595-.155-8.586-.155-2.991 0-7.839 1.118-11.947 5.604-4.108 4.486-15.677 15.324-15.677 37.361s16.047 43.344 18.29 46.335c2.243 2.991 31.585 48.225 76.51 67.632 10.684 4.615 19.029 7.374 25.535 9.437 10.727 3.412 20.49 2.931 28.208 1.779 8.604-1.289 26.498-10.838 30.228-21.298 3.73-10.46 3.73-19.433 2.613-21.298-1.117-1.865-4.108-2.991-8.586-5.234l.008-.017Z" clip-rule="evenodd"/></svg>          </a>
+          <a href="#" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">
+            <Instagram class="text-green-cafe" size={26} />
+          </a>
+        </div>
+         -->
+      </div>
+
+      <div class="w-full lg:flex-1">
+        <div
+          class="relative w-full h-[300px] sm:h-[400px] lg:h-[480px] rounded-[2rem] p-2 bg-white/5 border border-white/10 shadow-2xl"
+        >
+          <div class="relative w-full h-full rounded-[1.6rem] overflow-hidden">
+            <iframe
+              title="Ubicación de Raíces Café en Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d436.89427448767225!2d-75.3496963406982!3d6.169420905462044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e469f5d6ede3365%3A0xe1e1fe13cbc33222!2zUGxhbnTDqQ!5e1!3m2!1ses-419!2sco!4v1772511778978!5m2!1ses-419!2sco"
+              class="absolute inset-0 w-full h-full border-0"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="border-t border-white/10 pt-8 text-center text-sm text-warm/70 font-light"
+    >
+      © 2026 Raíces Café. Todos los derechos reservados. Marinilla, Antioquia.
+    </div>
+  </div>
+</section>
+
+<script>
+  function initContactAnimations() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+    );
+
+    document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+      el.classList.remove("is-visible");
+      observer.observe(el);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", initContactAnimations);
+  document.addEventListener("astro:page-load", initContactAnimations);
+</script>
