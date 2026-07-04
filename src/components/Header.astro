@@ -101,3 +101,41 @@ const navLinks = [
     </details>
   </div>
 </header>
+
+<script>
+  function updateHeaderActiveState() {
+    const path = window.location.pathname;
+    const links = document.querySelectorAll("header nav a");
+
+    links.forEach((link) => {
+      const href = link.getAttribute("href");
+      const isActive = href === path;
+      const isDesktop = link.closest("nav.hidden.md\\:flex") !== null;
+      const underline = link.querySelector("span.absolute");
+
+      if (isActive) {
+        link.setAttribute("aria-current", "page");
+        link.classList.remove("text-stone-mid", "hover:text-stone-cafe", "hover:bg-black/5");
+        link.classList.add("text-stone-cafe");
+        if (underline) {
+          underline.classList.remove("w-0");
+          underline.classList.add("w-full");
+        }
+      } else {
+        link.removeAttribute("aria-current");
+        link.classList.remove("text-stone-cafe");
+        if (isDesktop) {
+          link.classList.add("text-stone-mid", "hover:text-stone-cafe");
+        } else {
+          link.classList.add("text-stone-mid", "hover:bg-black/5", "hover:text-stone-cafe");
+        }
+        if (underline) {
+          underline.classList.remove("w-full");
+          underline.classList.add("w-0");
+        }
+      }
+    });
+  }
+
+  document.addEventListener("astro:after-swap", updateHeaderActiveState);
+</script>
