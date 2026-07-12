@@ -12,15 +12,6 @@ const contactItems = [
     title: "Horario",
     lines: ["Lunes - Sábado: 8:00 AM - 8:00 PM"],
   },
-  {
-    icon: Phone,
-    title: "Contacto",
-    lines: [
-      { text: "+57 314 625 7790", href: "tel:+573146257790" },
-      "",
-      { text: "elmati@gmail.com", href: "mailto:elmati@gmail.com" },
-    ],
-  },
 ];
 ---
 
@@ -73,14 +64,7 @@ const contactItems = [
                       <p class="text-warm/80 text-base font-light leading-6">
                         {line}
                       </p>
-                    ) : (
-                      <a
-                        href={line.href}
-                        class="text-warm/80 text-base font-light leading-6 hover:text-green-cafe transition-colors"
-                      >
-                        {line.text}
-                      </a>
-                    ),
+                    ) : null,
                   )}
                 </div>
               </div>
