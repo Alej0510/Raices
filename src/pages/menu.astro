@@ -1,12 +1,62 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import WithCoffee from "../components/menu/WithCoffee.astro";
-import WithoutCoffee from "../components/menu/WithoutCoffee.astro";
-import WithAlcohol from "../components/menu/WithAlcohol.astro";
+import MenuCategory from "../components/menu/MenuCategory.astro";
 import Footer from "../components/Footer.astro";
-import Food from "../components/menu/Food.astro";
 import { smoothTransition } from "../utils/transitions";
+
+const categories = [
+  {
+    folder: "bebidasCalientesConCafe",
+    title: "Bebidas Calientes con Café",
+    description:
+      "Nuestras preparaciones clásicas y de especialidad a base de café.",
+  },
+  {
+    folder: "bebidasFriasConCafe",
+    title: "Bebidas Frías con Café",
+    description: "Café frío para refrescar tus días.",
+  },
+  {
+    folder: "bebidasConLicor",
+    title: "Bebidas con Licor",
+    description:
+      "Nuestras especialidades con un toque de licor para acompañar tus mejores momentos.",
+  },
+  {
+    folder: "bebidasCalientesSinCafe",
+    title: "Bebidas Calientes sin Café",
+    description: "Opciones deliciosas y reconfortantes sin cafeína.",
+  },
+  {
+    folder: "bebidasFriasSinCafe",
+    title: "Bebidas Frías sin Café",
+    description: "Refrescantes opciones sin cafeína.",
+  },
+  {
+    folder: "otrasBebidas",
+    title: "Otras Bebidas",
+    description:
+      "Gaseosas, sodas, aguas y cervezas para todos los gustos.",
+  },
+  {
+    folder: "hojaldresPastelesYTortas",
+    title: "Hojaldres, Pasteles y Tortas",
+    description: "Delicias recién horneadas para acompañar tu bebida.",
+  },
+  {
+    folder: "metodosDeFiltrado",
+    title: "Métodos de Filtrado",
+    description:
+      "Café de especialidad preparado con métodos de filtrado manual.",
+  },
+  {
+    folder: "platosFuertes",
+    title: "Platos Fuertes",
+    description:
+      "Nuestras especialidades para acompañar tus mejores momentos.",
+  },
+];
 ---
 
 <Layout
@@ -53,10 +103,13 @@ import { smoothTransition } from "../utils/transitions";
         </div>
 
         <div class="max-w-4xl mx-auto space-y-12">
-          <WithCoffee />
-          <WithAlcohol />
-          <WithoutCoffee />
-          <Food />
+          {categories.map((category) => (
+            <MenuCategory
+              title={category.title}
+              description={category.description}
+              folder={category.folder}
+            />
+          ))}
         </div>
       </div>
     </div>

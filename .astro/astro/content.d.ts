@@ -141,177 +141,443 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"menu": {
-"Food/LasagnaMixta.md": {
-	id: "Food/LasagnaMixta.md";
-  slug: "food/lasagnamixta";
+"bebidasCalientesConCafe/cafeBombon.md": {
+	id: "bebidasCalientesConCafe/cafeBombon.md";
+  slug: "bebidascalientesconcafe/cafebombon";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"Food/WaffleConHelado.md": {
-	id: "Food/WaffleConHelado.md";
-  slug: "food/waffleconhelado";
+"bebidasCalientesConCafe/cappuccinoConAmaretto.md": {
+	id: "bebidasCalientesConCafe/cappuccinoConAmaretto.md";
+  slug: "bebidascalientesconcafe/cappuccinoconamaretto";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"Food/WrapPollo.md": {
-	id: "Food/WrapPollo.md";
-  slug: "food/wrappollo";
+"bebidasCalientesConCafe/capuchino.md": {
+	id: "bebidasCalientesConCafe/capuchino.md";
+  slug: "bebidascalientesconcafe/capuchino";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withAlcohol/CafeIrlandes.md": {
-	id: "withAlcohol/CafeIrlandes.md";
-  slug: "withalcohol/cafeirlandes";
+"bebidasCalientesConCafe/espresso.md": {
+	id: "bebidasCalientesConCafe/espresso.md";
+  slug: "bebidascalientesconcafe/espresso";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withAlcohol/CapuchinoConAmaretto.md": {
-	id: "withAlcohol/CapuchinoConAmaretto.md";
-  slug: "withalcohol/capuchinoconamaretto";
+"bebidasCalientesConCafe/espressoDoble.md": {
+	id: "bebidasCalientesConCafe/espressoDoble.md";
+  slug: "bebidascalientesconcafe/espressodoble";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withAlcohol/CapuchinoConBaileys.md": {
-	id: "withAlcohol/CapuchinoConBaileys.md";
-  slug: "withalcohol/capuchinoconbaileys";
+"bebidasCalientesConCafe/flatWhite.md": {
+	id: "bebidasCalientesConCafe/flatWhite.md";
+  slug: "bebidascalientesconcafe/flatwhite";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withAlcohol/CapuchinoConWhiskey.md": {
-	id: "withAlcohol/CapuchinoConWhiskey.md";
-  slug: "withalcohol/capuchinoconwhiskey";
+"bebidasCalientesConCafe/latte.md": {
+	id: "bebidasCalientesConCafe/latte.md";
+  slug: "bebidascalientesconcafe/latte";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/Affogato.md": {
-	id: "withCoffee/Affogato.md";
-  slug: "withcoffee/affogato";
+"bebidasCalientesConCafe/macchiato.md": {
+	id: "bebidasCalientesConCafe/macchiato.md";
+  slug: "bebidascalientesconcafe/macchiato";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/AffogatoTropical.md": {
-	id: "withCoffee/AffogatoTropical.md";
-  slug: "withcoffee/affogatotropical";
+"bebidasCalientesConCafe/mocaccino.md": {
+	id: "bebidasCalientesConCafe/mocaccino.md";
+  slug: "bebidascalientesconcafe/mocaccino";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/Americano.md": {
-	id: "withCoffee/Americano.md";
-  slug: "withcoffee/americano";
+"bebidasCalientesConCafe/tentacionDeNutella.md": {
+	id: "bebidasCalientesConCafe/tentacionDeNutella.md";
+  slug: "bebidascalientesconcafe/tentaciondenutella";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/CafeBombon.md": {
-	id: "withCoffee/CafeBombon.md";
-  slug: "withcoffee/cafebombon";
+"bebidasCalientesSinCafe/chocolateEnAgua.md": {
+	id: "bebidasCalientesSinCafe/chocolateEnAgua.md";
+  slug: "bebidascalientessincafe/chocolateenagua";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/Capuchino.md": {
-	id: "withCoffee/Capuchino.md";
-  slug: "withcoffee/capuchino";
+"bebidasCalientesSinCafe/chocolateEnLeche.md": {
+	id: "bebidasCalientesSinCafe/chocolateEnLeche.md";
+  slug: "bebidascalientessincafe/chocolateenleche";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/Espresso.md": {
-	id: "withCoffee/Espresso.md";
-  slug: "withcoffee/espresso";
+"bebidasCalientesSinCafe/milo.md": {
+	id: "bebidasCalientesSinCafe/milo.md";
+  slug: "bebidascalientessincafe/milo";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/EspressoDoble.md": {
-	id: "withCoffee/EspressoDoble.md";
-  slug: "withcoffee/espressodoble";
+"bebidasConLicor/cafeIrlandes.md": {
+	id: "bebidasConLicor/cafeIrlandes.md";
+  slug: "bebidasconlicor/cafeirlandes";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/FlatWhite.md": {
-	id: "withCoffee/FlatWhite.md";
-  slug: "withcoffee/flatwhite";
+"bebidasConLicor/capuchinoBaileys.md": {
+	id: "bebidasConLicor/capuchinoBaileys.md";
+  slug: "bebidasconlicor/capuchinobaileys";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/Latte.md": {
-	id: "withCoffee/Latte.md";
-  slug: "withcoffee/latte";
+"bebidasConLicor/capuchinoConWhisky.md": {
+	id: "bebidasConLicor/capuchinoConWhisky.md";
+  slug: "bebidasconlicor/capuchinoconwhisky";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/Macchiato.md": {
-	id: "withCoffee/Macchiato.md";
-  slug: "withcoffee/macchiato";
+"bebidasFriasConCafe/affogatoTropical.md": {
+	id: "bebidasFriasConCafe/affogatoTropical.md";
+  slug: "bebidasfriasconcafe/affogatotropical";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withCoffee/Mocaccino.md": {
-	id: "withCoffee/Mocaccino.md";
-  slug: "withcoffee/mocaccino";
+"bebidasFriasConCafe/latteFrio.md": {
+	id: "bebidasFriasConCafe/latteFrio.md";
+  slug: "bebidasfriasconcafe/lattefrio";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withoutCoffee/ChocolateConAgua.md": {
-	id: "withoutCoffee/ChocolateConAgua.md";
-  slug: "withoutcoffee/chocolateconagua";
+"bebidasFriasSinCafe/miloFrio.md": {
+	id: "bebidasFriasSinCafe/miloFrio.md";
+  slug: "bebidasfriassincafe/milofrio";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withoutCoffee/ChocolateConLeche.md": {
-	id: "withoutCoffee/ChocolateConLeche.md";
-  slug: "withoutcoffee/chocolateconleche";
+"bebidasFriasSinCafe/sodaSaborizadaDeFrutosAmarillos.md": {
+	id: "bebidasFriasSinCafe/sodaSaborizadaDeFrutosAmarillos.md";
+  slug: "bebidasfriassincafe/sodasaborizadadefrutosamarillos";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withoutCoffee/Milo.md": {
-	id: "withoutCoffee/Milo.md";
-  slug: "withoutcoffee/milo";
+"bebidasFriasSinCafe/sodaSaborizadaDeFrutosRojos.md": {
+	id: "bebidasFriasSinCafe/sodaSaborizadaDeFrutosRojos.md";
+  slug: "bebidasfriassincafe/sodasaborizadadefrutosrojos";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withoutCoffee/SodaFrutosAmarillos.md": {
-	id: "withoutCoffee/SodaFrutosAmarillos.md";
-  slug: "withoutcoffee/sodafrutosamarillos";
+"bebidasFriasSinCafe/sodaSaborizadaDeLychee.md": {
+	id: "bebidasFriasSinCafe/sodaSaborizadaDeLychee.md";
+  slug: "bebidasfriassincafe/sodasaborizadadelychee";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withoutCoffee/SodaFrutosRojos.md": {
-	id: "withoutCoffee/SodaFrutosRojos.md";
-  slug: "withoutcoffee/sodafrutosrojos";
+"bebidasFriasSinCafe/sodaSaborizadaDeMangoBiche.md": {
+	id: "bebidasFriasSinCafe/sodaSaborizadaDeMangoBiche.md";
+  slug: "bebidasfriassincafe/sodasaborizadademangobiche";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withoutCoffee/SodaLychee.md": {
-	id: "withoutCoffee/SodaLychee.md";
-  slug: "withoutcoffee/sodalychee";
+"hojaldresPastelesYTortas/croissantDeChocolate.md": {
+	id: "hojaldresPastelesYTortas/croissantDeChocolate.md";
+  slug: "hojaldrespastelesytortas/croissantdechocolate";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"withoutCoffee/SodaMango.md": {
-	id: "withoutCoffee/SodaMango.md";
-  slug: "withoutcoffee/sodamango";
+"hojaldresPastelesYTortas/croissantDeQueso.md": {
+	id: "hojaldresPastelesYTortas/croissantDeQueso.md";
+  slug: "hojaldrespastelesytortas/croissantdequeso";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/croissantSencillo.md": {
+	id: "hojaldresPastelesYTortas/croissantSencillo.md";
+  slug: "hojaldrespastelesytortas/croissantsencillo";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/palitoDeQueso.md": {
+	id: "hojaldresPastelesYTortas/palitoDeQueso.md";
+  slug: "hojaldrespastelesytortas/palitodequeso";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/pastelArequipe.md": {
+	id: "hojaldresPastelesYTortas/pastelArequipe.md";
+  slug: "hojaldrespastelesytortas/pastelarequipe";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/pastelCarneVerduras.md": {
+	id: "hojaldresPastelesYTortas/pastelCarneVerduras.md";
+  slug: "hojaldrespastelesytortas/pastelcarneverduras";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/pastelDeEspinacaYQueso.md": {
+	id: "hojaldresPastelesYTortas/pastelDeEspinacaYQueso.md";
+  slug: "hojaldrespastelesytortas/pasteldeespinacayqueso";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/pastelGloria.md": {
+	id: "hojaldresPastelesYTortas/pastelGloria.md";
+  slug: "hojaldrespastelesytortas/pastelgloria";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/pastelGuayaba.md": {
+	id: "hojaldresPastelesYTortas/pastelGuayaba.md";
+  slug: "hojaldrespastelesytortas/pastelguayaba";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/pastelItaliano.md": {
+	id: "hojaldresPastelesYTortas/pastelItaliano.md";
+  slug: "hojaldrespastelesytortas/pastelitaliano";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/pastelJamonYQueso.md": {
+	id: "hojaldresPastelesYTortas/pastelJamonYQueso.md";
+  slug: "hojaldrespastelesytortas/pasteljamonyqueso";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/pastelPolloChampinones.md": {
+	id: "hojaldresPastelesYTortas/pastelPolloChampinones.md";
+  slug: "hojaldrespastelesytortas/pastelpollochampinones";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/pastelPolloVerduras.md": {
+	id: "hojaldresPastelesYTortas/pastelPolloVerduras.md";
+  slug: "hojaldrespastelesytortas/pastelpolloverduras";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/pastelRanchero.md": {
+	id: "hojaldresPastelesYTortas/pastelRanchero.md";
+  slug: "hojaldrespastelesytortas/pastelranchero";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/pastelTresQuesos.md": {
+	id: "hojaldresPastelesYTortas/pastelTresQuesos.md";
+  slug: "hojaldrespastelesytortas/pasteltresquesos";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/portionDeTortaDeZanahoria.md": {
+	id: "hojaldresPastelesYTortas/portionDeTortaDeZanahoria.md";
+  slug: "hojaldrespastelesytortas/portiondetortadezanahoria";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"hojaldresPastelesYTortas/portionDeTortaRedVelvet.md": {
+	id: "hojaldresPastelesYTortas/portionDeTortaRedVelvet.md";
+  slug: "hojaldrespastelesytortas/portiondetortaredvelvet";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"metodosDeFiltrado/aeropress.md": {
+	id: "metodosDeFiltrado/aeropress.md";
+  slug: "metodosdefiltrado/aeropress";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"metodosDeFiltrado/chemex2Tazas.md": {
+	id: "metodosDeFiltrado/chemex2Tazas.md";
+  slug: "metodosdefiltrado/chemex2tazas";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"metodosDeFiltrado/chemex4Tazas.md": {
+	id: "metodosDeFiltrado/chemex4Tazas.md";
+  slug: "metodosdefiltrado/chemex4tazas";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"metodosDeFiltrado/prensaFrancesa2Tazas.md": {
+	id: "metodosDeFiltrado/prensaFrancesa2Tazas.md";
+  slug: "metodosdefiltrado/prensafrancesa2tazas";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"metodosDeFiltrado/prensaFrancesa4Tazas.md": {
+	id: "metodosDeFiltrado/prensaFrancesa4Tazas.md";
+  slug: "metodosdefiltrado/prensafrancesa4tazas";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"metodosDeFiltrado/v602Tazas.md": {
+	id: "metodosDeFiltrado/v602Tazas.md";
+  slug: "metodosdefiltrado/v602tazas";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"metodosDeFiltrado/v604Tazas.md": {
+	id: "metodosDeFiltrado/v604Tazas.md";
+  slug: "metodosdefiltrado/v604tazas";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"otrasBebidas/agua.md": {
+	id: "otrasBebidas/agua.md";
+  slug: "otrasbebidas/agua";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"otrasBebidas/cervezaAguila.md": {
+	id: "otrasBebidas/cervezaAguila.md";
+  slug: "otrasbebidas/cervezaaguila";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"otrasBebidas/cervezaCoronita.md": {
+	id: "otrasBebidas/cervezaCoronita.md";
+  slug: "otrasbebidas/cervezacoronita";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"otrasBebidas/cervezaCusquenaDorada.md": {
+	id: "otrasBebidas/cervezaCusquenaDorada.md";
+  slug: "otrasbebidas/cervezacusquenadorada";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"otrasBebidas/cervezaCusquenaTrigo.md": {
+	id: "otrasBebidas/cervezaCusquenaTrigo.md";
+  slug: "otrasbebidas/cervezacusquenatrigo";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"otrasBebidas/cervezaPilsen.md": {
+	id: "otrasBebidas/cervezaPilsen.md";
+  slug: "otrasbebidas/cervezapilsen";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"otrasBebidas/cervezaStella.md": {
+	id: "otrasBebidas/cervezaStella.md";
+  slug: "otrasbebidas/cervezastella";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"otrasBebidas/cocaCola.md": {
+	id: "otrasBebidas/cocaCola.md";
+  slug: "otrasbebidas/cocacola";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"otrasBebidas/gaseosaManzana.md": {
+	id: "otrasBebidas/gaseosaManzana.md";
+  slug: "otrasbebidas/gaseosamanzana";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"otrasBebidas/soda1976ManzanaMichelada.md": {
+	id: "otrasBebidas/soda1976ManzanaMichelada.md";
+  slug: "otrasbebidas/soda1976manzanamichelada";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"otrasBebidas/soda1976TamarindoMichelada.md": {
+	id: "otrasBebidas/soda1976TamarindoMichelada.md";
+  slug: "otrasbebidas/soda1976tamarindomichelada";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"otrasBebidas/soda1976ToronjaMichelada.md": {
+	id: "otrasBebidas/soda1976ToronjaMichelada.md";
+  slug: "otrasbebidas/soda1976toronjamichelada";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"otrasBebidas/sodaBretana.md": {
+	id: "otrasBebidas/sodaBretana.md";
+  slug: "otrasbebidas/sodabretana";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"platosFuertes/amanecerRaices.md": {
+	id: "platosFuertes/amanecerRaices.md";
+  slug: "platosfuertes/amanecerraices";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"platosFuertes/lasanaDePollo.md": {
+	id: "platosFuertes/lasanaDePollo.md";
+  slug: "platosfuertes/lasanadepollo";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"platosFuertes/wrapDePollo.md": {
+	id: "platosFuertes/wrapDePollo.md";
+  slug: "platosfuertes/wrapdepollo";
   body: string;
   collection: "menu";
   data: any
