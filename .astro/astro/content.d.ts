@@ -148,16 +148,16 @@ declare module 'astro:content' {
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"bebidasCalientesConCafe/cappuccinoConAmaretto.md": {
-	id: "bebidasCalientesConCafe/cappuccinoConAmaretto.md";
-  slug: "bebidascalientesconcafe/cappuccinoconamaretto";
+"bebidasCalientesConCafe/cappuccino.md": {
+	id: "bebidasCalientesConCafe/cappuccino.md";
+  slug: "bebidascalientesconcafe/cappuccino";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"bebidasCalientesConCafe/capuchino.md": {
-	id: "bebidasCalientesConCafe/capuchino.md";
-  slug: "bebidascalientesconcafe/capuchino";
+"bebidasCalientesConCafe/cappuccinoConAmaretto.md": {
+	id: "bebidasCalientesConCafe/cappuccinoConAmaretto.md";
+  slug: "bebidascalientesconcafe/cappuccinoconamaretto";
   body: string;
   collection: "menu";
   data: any
@@ -239,16 +239,16 @@ declare module 'astro:content' {
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"bebidasConLicor/capuchinoBaileys.md": {
-	id: "bebidasConLicor/capuchinoBaileys.md";
-  slug: "bebidasconlicor/capuchinobaileys";
+"bebidasConLicor/cappuccinoBaileys.md": {
+	id: "bebidasConLicor/cappuccinoBaileys.md";
+  slug: "bebidasconlicor/cappuccinobaileys";
   body: string;
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"bebidasConLicor/capuchinoConWhisky.md": {
-	id: "bebidasConLicor/capuchinoConWhisky.md";
-  slug: "bebidasconlicor/capuchinoconwhisky";
+"bebidasConLicor/cappuccinoConWhisky.md": {
+	id: "bebidasConLicor/cappuccinoConWhisky.md";
+  slug: "bebidasconlicor/cappuccinoconwhisky";
   body: string;
   collection: "menu";
   data: any
@@ -270,6 +270,13 @@ declare module 'astro:content' {
 "bebidasFriasSinCafe/miloFrio.md": {
 	id: "bebidasFriasSinCafe/miloFrio.md";
   slug: "bebidasfriassincafe/milofrio";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"bebidasFriasSinCafe/sodaMichelada.md": {
+	id: "bebidasFriasSinCafe/sodaMichelada.md";
+  slug: "bebidasfriassincafe/sodamichelada";
   body: string;
   collection: "menu";
   data: any

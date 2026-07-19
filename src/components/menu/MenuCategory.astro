@@ -1,11 +1,16 @@
 ---
+import type { Component } from "astro";
+
 interface Props {
   title: string;
   description: string;
   folder: string;
+  id: string;
+  icon: Component;
+  accent?: string;
 }
 
-const { title, description, folder } = Astro.props;
+const { title, description, folder, id, icon: Icon, accent } = Astro.props;
 
 const allItems = await Astro.glob("../../content/menu/**/*.md");
 const menuItems = allItems.filter((item) =>
@@ -15,40 +20,70 @@ const menuItems = allItems.filter((item) =>
 const formatPrice = (price: number) => {
   return "$" + price.toLocaleString("es-CO");
 };
+
+const parts = (() => {
+  const idx = accent ? title.indexOf(accent) : -1;
+  if (idx === -1) return { before: title, accent: "", after: "" };
+  return {
+    before: title.slice(0, idx),
+    accent,
+    after: title.slice(idx + accent.length),
+  };
+})();
 ---
 
-<section class="mb-16">
-  <div class="mb-8">
-    <h2
-      class="font-display text-3xl font-normal text-stone-cafe mb-3 flex items-center gap-3"
-    >
-      {title}
-      <div class="h-px bg-green-cafe/30 flex-grow"></div>
-    </h2>
-    <p class="text-sm text-black font-extralight">
-      {description}
-    </p>
-  </div>
+<section id={id} class="scroll-mt-24 mb-16 last:mb-0">
+  <header class="mb-7 reveal">
+    <div class="flex items-start gap-4">
+      <span
+        class="flex items-center justify-center w-[3.5rem] h-[3.5rem] md:w-[4rem] md:h-[4rem] shrink-0 rounded-2xl text-green-cafe/70"
+      >
+        <Icon size={36} strokeWidth={1.5} />
+      </span>
+      <div class="pt-2 flex-1 min-w-0">
+        <h2
+          class="font-display text-3xl md:text-4xl font-normal text-stone-cafe leading-tight text-balance"
+        >
+          {parts.before}{
+            parts.accent && <em class="italic font-normal">{parts.accent}</em>
+          }{parts.after}
+        </h2>
+        <p
+          class="text-base text-stone-mid font-light mt-2 max-w-xl leading-relaxed"
+        >
+          {description}
+        </p>
+      </div>
+    </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2">
+    <div class="flex items-center gap-3 mt-5 md:ml-[4rem]">
+      <span class="w-1.5 h-1.5 rounded-full bg-green-cafe/50 shrink-0"></span>
+      <div class="h-px flex-1 bg-green-cafe/50"></div>
+    </div>
+  </header>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 md:ml-[4rem]">
     {
-      menuItems.map((item) => (
-        <div class="flex flex-col border-b border-green-cafe/10 py-4 last:border-b-0 md:last:border-b-[rgba(107,130,62,0.1)]">
-          <div class="flex justify-between items-baseline gap-4">
-            <h3 class="font-display text-lg font-normal text-stone-cafe">
+      menuItems.map((item, i) => (
+        <article
+          class="group reveal rounded-lg -mx-2 px-2 py-4 transition-colors duration-300 hover:bg-cream/60"
+          style={`transition-delay: ${Math.min(i * 40, 320)}ms`}
+        >
+          <div class="flex justify-between items-baseline gap-3">
+            <h3 class="font-display text-xl font-normal text-stone-cafe transition-colors duration-300 group-hover:text-green-cafe">
               {item.frontmatter.title}
             </h3>
-            <div class="flex-grow border-b border-dotted border-stone-cafe/30 mx-2 relative top-[-6px]" />
-            <span class="text-base text-green-cafe font-semibold whitespace-nowrap">
+            <div class="flex-grow border-b border-dotted border-stone-cafe/25 group-hover:border-green-cafe/50 transition-colors duration-300 mx-1 relative top-[-5px]" />
+            <span class="font-display text-lg text-green-cafe whitespace-nowrap tabular-nums">
               {formatPrice(item.frontmatter.price)}
             </span>
           </div>
           {item.frontmatter.description && (
-            <p class="text-sm leading-5 text-black font-extralight mt-1 md:pr-8">
+            <p class="text-base leading-6 text-stone-mid font-light italic mt-2 md:pr-6">
               {item.frontmatter.description}
             </p>
           )}
-        </div>
+        </article>
       ))
     }
   </div>

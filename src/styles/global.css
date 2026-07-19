@@ -52,6 +52,13 @@
   .text-shadow-sm {
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
   }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* View transition keyframes */

@@ -5,13 +5,13 @@ const menuItems = [
     image: "/menu/cappuccino.png",
     name: "Cappuccino",
     description: "Espresso doble con leche texturizada cremosa.",
-    price: "$8.500",
+    price: "$8.000",
   },
   {
     image: "/menu/chemex.png",
-    name: "Chemex",
+    name: "Filtrado en chemex",
     description: "Filtrado artesanal para un perfil limpio y aromático.",
-    price: "$12.000",
+    price: "$10.000",
   },
 ];
 ---
@@ -21,13 +21,22 @@ const menuItems = [
   class="bg-cream px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32 relative overflow-hidden"
 >
   <!-- Decorative blob -->
-  <div class="absolute top-0 right-0 w-96 h-96 bg-green-cafe/5 rounded-full blur-[120px] pointer-events-none"></div>
-  <div class="absolute bottom-0 left-0 w-80 h-80 bg-cream-dark/50 rounded-full blur-[100px] pointer-events-none"></div>
+  <div
+    class="absolute top-0 right-0 w-96 h-96 bg-green-cafe/5 rounded-full blur-[120px] pointer-events-none"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 left-0 w-80 h-80 bg-cream-dark/50 rounded-full blur-[100px] pointer-events-none"
+  >
+  </div>
 
   <div class="relative z-10 max-w-[1280px] mx-auto">
     <!-- Menu header -->
     <div class="text-center mb-16 sm:mb-20 reveal">
-      <span class="text-green-cafe text-sm tracking-[0.2em] uppercase font-medium">Especialidades</span>
+      <span
+        class="text-green-cafe text-base tracking-[0.2em] uppercase font-medium"
+        >Especialidades</span
+      >
       <h2
         class="font-display text-4xl sm:text-5xl font-normal text-stone-cafe mt-3 mb-5 tracking-tight"
       >
@@ -40,15 +49,15 @@ const menuItems = [
     </div>
 
     <!-- Cards -->
-    <div
-      class="grid grid-cols-1 gap-10 mb-16 sm:grid-cols-2 max-w-5xl mx-auto"
-    >
+    <div class="grid grid-cols-1 gap-10 mb-16 sm:grid-cols-2 max-w-5xl mx-auto">
       {
         menuItems.map((item, index) => (
-          <div class:list={[
-            "group bg-white rounded-[2rem] border border-cream-border overflow-hidden shadow-sm hover:shadow-2xl hover:border-green-cafe/30 transition-all duration-500 flex flex-col transform hover:-translate-y-2 reveal",
-            `reveal-delay-${index + 1}`,
-          ]}>
+          <div
+            class:list={[
+              "group bg-white rounded-[2rem] border border-cream-border overflow-hidden shadow-sm hover:shadow-2xl hover:border-green-cafe/30 transition-all duration-500 flex flex-col transform hover:-translate-y-2 reveal",
+              `reveal-delay-${index + 1}`,
+            ]}
+          >
             <div class="overflow-hidden relative aspect-[4/3]">
               <Image
                 src={item.image}
@@ -58,7 +67,7 @@ const menuItems = [
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-stone-cafe/70 via-stone-cafe/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span class="absolute top-4 right-4 bg-white/95 backdrop-blur text-green-cafe font-medium px-4 py-1.5 rounded-full text-sm shadow-sm">
+              <span class="absolute top-4 right-4 bg-white/95 backdrop-blur text-green-cafe font-medium px-4 py-1.5 rounded-full text-base shadow-sm">
                 {item.price}
               </span>
             </div>
@@ -70,10 +79,20 @@ const menuItems = [
                 {item.description}
               </p>
               <div class="pt-5 mt-auto">
-                <span class="inline-flex items-center gap-2 text-green-cafe font-medium text-sm group-hover:gap-3 transition-all duration-300">
+                <span class="inline-flex items-center gap-2 text-green-cafe font-medium text-base group-hover:gap-3 transition-all duration-300">
                   Ver en el menú
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
                   </svg>
                 </span>
               </div>
@@ -90,8 +109,17 @@ const menuItems = [
         class="group inline-flex items-center gap-3 border-2 border-green-cafe bg-transparent rounded-full px-8 py-3.5 text-base text-stone-cafe font-medium hover:bg-green-cafe hover:text-white transition-all duration-300 transform hover:-translate-y-0.5"
       >
         Ver Menú Completo
-        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        <svg
+          class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
         </svg>
       </a>
     </div>

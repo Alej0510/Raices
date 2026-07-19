@@ -4,57 +4,111 @@ import Header from "../components/Header.astro";
 import MenuCategory from "../components/menu/MenuCategory.astro";
 import Footer from "../components/Footer.astro";
 import { smoothTransition } from "../utils/transitions";
+import CoffeeBeansIcon from "../components/icons/CoffeeBeansIcon.astro";
+import {
+  Coffee,
+  Snowflake,
+  Wine,
+  Utensils,
+  Croissant,
+  CupSoda,
+  Funnel,
+  Beer,
+} from "@lucide/astro";
+import type { Component } from "astro";
 
-const categories = [
+const categories: {
+  id: string;
+  folder: string;
+  title: string;
+  accent: string;
+  nav: string;
+  description: string;
+  icon: Component;
+}[] = [
   {
+    id: "bebidas-calientes-con-cafe",
     folder: "bebidasCalientesConCafe",
     title: "Bebidas Calientes con Café",
+    accent: "Café",
+    nav: "Café Caliente",
     description:
       "Nuestras preparaciones clásicas y de especialidad a base de café.",
+    icon: CoffeeBeansIcon,
   },
   {
+    id: "bebidas-frias-con-cafe",
     folder: "bebidasFriasConCafe",
     title: "Bebidas Frías con Café",
+    accent: "Café",
+    nav: "Café Frío",
     description: "Café frío para refrescar tus días.",
+    icon: CupSoda,
   },
   {
+    id: "bebidas-con-licor",
     folder: "bebidasConLicor",
     title: "Bebidas con Licor",
+    accent: "Licor",
+    nav: "Con Licor",
     description:
       "Nuestras especialidades con un toque de licor para acompañar tus mejores momentos.",
+    icon: Wine,
   },
   {
+    id: "bebidas-calientes-sin-cafe",
     folder: "bebidasCalientesSinCafe",
     title: "Bebidas Calientes sin Café",
+    accent: "Café",
+    nav: "Caliente sin Café",
     description: "Opciones deliciosas y reconfortantes sin cafeína.",
+    icon: Coffee,
   },
   {
+    id: "bebidas-frias-sin-cafe",
     folder: "bebidasFriasSinCafe",
     title: "Bebidas Frías sin Café",
+    accent: "Café",
+    nav: "Frío sin Café",
     description: "Refrescantes opciones sin cafeína.",
+    icon: Snowflake,
   },
   {
+    id: "otras-bebidas",
     folder: "otrasBebidas",
     title: "Otras Bebidas",
-    description:
-      "Gaseosas, sodas, aguas y cervezas para todos los gustos.",
+    accent: "Bebidas",
+    nav: "Otras Bebidas",
+    description: "Gaseosas, sodas, aguas y cervezas para todos los gustos.",
+    icon: Beer,
   },
   {
+    id: "hojaldres-pasteles-y-tortas",
     folder: "hojaldresPastelesYTortas",
     title: "Hojaldres, Pasteles y Tortas",
+    accent: "Tortas",
+    nav: "Hojaldres y Tortas",
     description: "Delicias recién horneadas para acompañar tu bebida.",
+    icon: Croissant,
   },
   {
+    id: "metodos-de-filtrado",
     folder: "metodosDeFiltrado",
     title: "Métodos de Filtrado",
+    accent: "Filtrado",
+    nav: "Métodos de Filtrado",
     description:
       "Café de especialidad preparado con métodos de filtrado manual.",
+    icon: Funnel,
   },
   {
+    id: "platos-fuertes",
     folder: "platosFuertes",
     title: "Platos Fuertes",
-    description:
-      "Nuestras especialidades para acompañar tus mejores momentos.",
+    accent: "Fuertes",
+    nav: "Platos Fuertes",
+    description: "Nuestras especialidades para acompañar tus mejores momentos.",
+    icon: Utensils,
   },
 ];
 ---
@@ -69,50 +123,110 @@ const categories = [
   ]}
 >
   <Header />
-  <main class="pt-20 pb-20 bg-cream" transition:animate={smoothTransition}>
-    <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8">
+  <main
+    class="pt-20 pb-20 bg-cream relative overflow-hidden"
+    transition:animate={smoothTransition}
+  >
+    <!-- Atmospheric background -->
+    <div
+      class="absolute top-20 -left-24 w-96 h-96 bg-green-cafe/5 rounded-full blur-[120px] pointer-events-none"
+    >
+    </div>
+    <div
+      class="absolute bottom-40 -right-24 w-96 h-96 bg-cream-dark/60 rounded-full blur-[120px] pointer-events-none"
+    >
+    </div>
+
+    <div class="relative z-10 max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Menu Header -->
-      <div class="text-center mb-16">
-        <span
-          class="text-green-cafe font-semibold tracking-widest2 text-sm uppercase mb-3 block"
-          >Descubre</span
-        >
+      <div class="text-center mb-14 reveal">
+        <div class="flex items-center justify-center gap-3 mb-5">
+          <div class="h-px w-10 bg-green-cafe/40"></div>
+          <span
+            class="text-green-cafe text-base tracking-[0.2em] uppercase font-medium"
+          >
+            Descubre
+          </span>
+          <div class="h-px w-10 bg-green-cafe/40"></div>
+        </div>
         <h1
-          class="font-display text-5xl md:text-6xl font-normal text-stone-cafe mb-5"
+          class="font-display text-5xl md:text-6xl font-normal text-stone-cafe mb-5 leading-tight"
         >
-          Nuestro Menú
+          Nuestro <span class="italic">Menú</span>
         </h1>
-        <p class="text-base text-black font-extralight max-w-2xl mx-auto">
+        <p
+          class="text-base text-stone-mid font-light max-w-2xl mx-auto leading-relaxed"
+        >
           Preparaciones elaboradas con dedicación, resaltando los mejores
           sabores de nuestra tierra para brindarte una experiencia única.
         </p>
+        <!-- Ornament -->
+        <div class="flex items-center justify-center gap-3 mt-7">
+          <div class="h-px w-12 bg-green-cafe/30"></div>
+          <div class="flex items-center gap-1.5">
+            <span class="w-1 h-1 rounded-full bg-green-cafe/50"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-green-cafe"></span>
+            <span class="w-1 h-1 rounded-full bg-green-cafe/50"></span>
+          </div>
+          <div class="h-px w-12 bg-green-cafe/30"></div>
+        </div>
       </div>
 
       <!-- Menu Card wrapper -->
       <div
-        class="bg-white rounded-3xl p-6 md:p-12 shadow-sm border border-cream-border relative"
+        class="relative bg-white rounded-[2rem] p-6 md:p-12 shadow-[0_24px_70px_-40px_rgba(23,23,22,0.35)] border border-cream-border overflow-hidden"
       >
-        <!-- Decorative elements -->
+        <!-- Top accent -->
+        <div class="absolute top-0 inset-x-0 h-1.5 bg-green-cafe"></div>
+        <!-- Bottom accent -->
+        <div class="absolute bottom-0 inset-x-0 h-1.5 bg-green-cafe"></div>
+        <!-- Paper texture -->
         <div
-          class="absolute top-0 left-0 w-full h-2 bg-green-cafe rounded-t-3xl opacity-80"
-        >
-        </div>
-        <div
-          class="absolute bottom-0 left-0 w-full h-2 bg-green-cafe rounded-b-3xl opacity-80"
+          class="absolute inset-0 opacity-[0.025] pointer-events-none"
+          style="background-image: radial-gradient(#6b823e 1px, transparent 1px); background-size: 22px 22px;"
         >
         </div>
 
-        <div class="max-w-4xl mx-auto space-y-12">
-          {categories.map((category) => (
-            <MenuCategory
-              title={category.title}
-              description={category.description}
-              folder={category.folder}
-            />
-          ))}
+        <div class="relative z-10">
+          {
+            categories.map((category) => (
+              <MenuCategory
+                id={category.id}
+                title={category.title}
+                accent={category.accent}
+                description={category.description}
+                folder={category.folder}
+                icon={category.icon}
+              />
+            ))
+          }
         </div>
       </div>
     </div>
   </main>
   <Footer />
 </Layout>
+
+<script>
+  function initMenuInteractions() {
+    // Reveal-on-scroll
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+    );
+    document.querySelectorAll(".reveal").forEach((el) => {
+      el.classList.remove("is-visible");
+      revealObserver.observe(el);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", initMenuInteractions);
+  document.addEventListener("astro:page-load", initMenuInteractions);
+</script>

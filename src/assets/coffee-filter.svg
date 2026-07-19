@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="currentColor" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+  <!-- dripper cone -->
+  <path d="M96 42 L416 42" />
+  <path d="M96 42 L256 190" />
+  <path d="M416 42 L256 190" />
+
+  <!-- small handle loop on the dripper -->
+  <path d="M380 60 C 430 55, 450 75, 445 95 C 440 118, 405 120, 375 108" />
+
+  <!-- rim connecting dripper to carafe -->
+  <path d="M55 200 L457 200" />
+
+  <!-- carafe neck -->
+  <path d="M170 200 L170 265" />
+  <path d="M342 200 L342 265" />
+
+  <!-- carafe body -->
+  <path d="M170 265 C110 300 70 330 70 390 C70 430 105 460 150 460 L362 460 C407 460 442 430 442 390 C442 330 402 300 342 265" />
+
+  <!-- carafe handle -->
+  <path d="M342 230 C400 235 452 260 452 300 C452 330 425 340 400 325 C385 315 370 300 358 285" />
+
+  <!-- liquid level line -->
+  <path d="M90 400 C130 380 160 420 200 400 C240 380 280 420 320 400 C360 380 390 410 420 400" />
+
+  <!-- coffee drop -->
+  <path d="M256 300 C270 320 282 335 282 350 C282 365 270 375 256 375 C242 375 230 365 230 350 C230 335 242 320 256 300 Z" />
+</svg>
