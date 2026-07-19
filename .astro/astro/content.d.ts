@@ -155,13 +155,6 @@ declare module 'astro:content' {
   collection: "menu";
   data: any
 } & { render(): Render[".md"] };
-"bebidasCalientesConCafe/cappuccinoConAmaretto.md": {
-	id: "bebidasCalientesConCafe/cappuccinoConAmaretto.md";
-  slug: "bebidascalientesconcafe/cappuccinoconamaretto";
-  body: string;
-  collection: "menu";
-  data: any
-} & { render(): Render[".md"] };
 "bebidasCalientesConCafe/espresso.md": {
 	id: "bebidasCalientesConCafe/espresso.md";
   slug: "bebidascalientesconcafe/espresso";
@@ -242,6 +235,13 @@ declare module 'astro:content' {
 "bebidasConLicor/cappuccinoBaileys.md": {
 	id: "bebidasConLicor/cappuccinoBaileys.md";
   slug: "bebidasconlicor/cappuccinobaileys";
+  body: string;
+  collection: "menu";
+  data: any
+} & { render(): Render[".md"] };
+"bebidasConLicor/cappuccinoConAmaretto.md": {
+	id: "bebidasConLicor/cappuccinoConAmaretto.md";
+  slug: "bebidasconlicor/cappuccinoconamaretto";
   body: string;
   collection: "menu";
   data: any
